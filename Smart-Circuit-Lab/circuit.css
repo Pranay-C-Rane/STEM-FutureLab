@@ -1,0 +1,881 @@
+/* ========================================
+   STEM FUTURELAB
+   SMART CIRCUIT LAB
+======================================== */
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #020617;
+
+    color: #e2e8f0;
+
+    min-height: 100vh;
+
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.top-header {
+
+    width: 100%;
+
+    padding: 18px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #0b1120;
+
+    border-bottom: 1px solid #1e293b;
+
+}
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+.logo-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+}
+
+.header-left h1 {
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+
+}
+
+.header-left p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+.header-right {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.header-button {
+
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    border: 1px solid #334155;
+
+    background: #111827;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+.header-button:hover {
+
+    background: #1e293b;
+
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.circuit-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 55px 0 80px;
+
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+.small-title {
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+.hero h2 {
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+}
+
+.hero p:last-child {
+
+    max-width: 680px;
+
+    margin: auto;
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+}
+
+
+/* ========================================
+   WORKSPACE
+======================================== */
+
+.circuit-workspace {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* ========================================
+   PANELS
+======================================== */
+
+.board-panel,
+.control-panel {
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+}
+
+.panel-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+}
+
+.panel-header h2 {
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+}
+
+.panel-header span {
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+}
+
+
+/* ========================================
+   CIRCUIT BOARD
+======================================== */
+
+.circuit-board {
+
+    min-height: 420px;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #172033 0%,
+            #0f172a 45%,
+            #020617 100%
+        );
+
+    border: 1px solid #334155;
+
+    border-radius: 15px;
+
+}
+
+
+/* ========================================
+   COMPONENTS
+======================================== */
+
+.component {
+
+    min-width: 105px;
+
+    min-height: 105px;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 5px;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    border-radius: 13px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.component-icon {
+
+    font-size: 34px;
+
+}
+
+.component strong {
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+}
+
+.component small {
+
+    color: #64748b;
+
+    font-size: 10px;
+
+}
+
+
+/* ========================================
+   SWITCH
+======================================== */
+
+.switch {
+
+    color: #e2e8f0;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+
+}
+
+.switch:hover {
+
+    border-color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+.switch.active {
+
+    background: #172554;
+
+    border-color: #3b82f6;
+
+}
+
+
+/* ========================================
+   LED
+======================================== */
+
+.led.active {
+
+    background: #172554;
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 25px
+        rgba(59, 130, 246, 0.35);
+
+}
+
+.led.active .component-icon {
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(96, 165, 250, 0.9)
+        );
+
+}
+
+
+/* ========================================
+   WIRES
+======================================== */
+
+.wire {
+
+    width: 50px;
+
+    height: 5px;
+
+    background: #334155;
+
+    position: relative;
+
+    z-index: 1;
+
+    transition: 0.3s;
+
+}
+
+.wire.active {
+
+    background: #3b82f6;
+
+    box-shadow:
+        0 0 10px
+        rgba(59, 130, 246, 0.8);
+
+}
+
+
+/* ========================================
+   CIRCUIT MESSAGE
+======================================== */
+
+.circuit-message {
+
+    margin-top: 18px;
+
+    padding: 17px;
+
+    border-radius: 11px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+}
+
+.circuit-message h3 {
+
+    color: #ffffff;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+
+}
+
+.circuit-message p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================
+   CONTROL PANEL
+======================================== */
+
+.control-info {
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+}
+
+.control-info h3 {
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+
+}
+
+.control-info p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status-box {
+
+    padding: 15px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+.status-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #1e293b;
+
+}
+
+.status-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.status-row span {
+
+    color: #94a3b8;
+
+}
+
+.status-row strong {
+
+    color: #ffffff;
+
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.primary-button,
+.secondary-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+
+}
+
+.primary-button {
+
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    margin-bottom: 10px;
+
+}
+
+.primary-button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+}
+
+.secondary-button {
+
+    border: 1px solid #334155;
+
+    background: #111827;
+
+    color: #cbd5e1;
+
+}
+
+.secondary-button:hover {
+
+    background: #1e293b;
+
+}
+
+
+/* ========================================
+   MISSION
+======================================== */
+
+.mission-section {
+
+    text-align: center;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+}
+
+.mission-section h2 {
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+.mission-section > p:not(.small-title) {
+
+    color: #94a3b8;
+
+    margin-bottom: 25px;
+
+}
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+}
+
+.mission-card {
+
+    padding: 22px;
+
+    background: #111827;
+
+    border: 1px solid #263449;
+
+    border-radius: 13px;
+
+}
+
+.mission-card span {
+
+    font-size: 28px;
+
+}
+
+.mission-card h3 {
+
+    color: #ffffff;
+
+    margin: 10px 0 8px;
+
+    font-size: 16px;
+
+}
+
+.mission-card p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================
+   LEARNING
+======================================== */
+
+.learning-section {
+
+    padding: 35px;
+
+    background: #0b1120;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+}
+
+.learning-section h2 {
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+}
+
+.learning-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+}
+
+.learning-card {
+
+    padding: 22px;
+
+    background: #111827;
+
+    border: 1px solid #263449;
+
+    border-radius: 13px;
+
+}
+
+.learning-card span {
+
+    font-size: 28px;
+
+}
+
+.learning-card h3 {
+
+    color: #ffffff;
+
+    margin: 12px 0 8px;
+
+    font-size: 16px;
+
+}
+
+.learning-card p {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+
+    .circuit-workspace {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .learning-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .top-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .header-right {
+
+        width: 100%;
+
+    }
+
+    .header-button {
+
+        flex: 1;
+
+    }
+
+    .hero h2 {
+
+        font-size: 29px;
+
+    }
+
+    .circuit-board {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+    }
+
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .learning-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

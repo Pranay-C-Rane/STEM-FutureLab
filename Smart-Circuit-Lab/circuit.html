@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Circuit Lab | STEM FutureLab</title>
+
+    <link rel="stylesheet"
+          href="circuit.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <div class="logo-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <h1>
+                    Smart Circuit Lab
+                </h1>
+
+                <p>
+                    STEM FutureLab • Connect • Power • Discover
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button
+                id="refresh-page"
+                class="header-button">
+
+                🔄 Refresh
+
+            </button>
+
+
+            <button
+                id="home-page"
+                class="header-button">
+
+                🏠 Home
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         MAIN
+    ========================================= -->
+
+    <main class="circuit-container">
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+            <p class="small-title">
+                ELECTRONICS & CIRCUITS
+            </p>
+
+            <h2>
+                Build Your First Smart Circuit ⚡
+            </h2>
+
+            <p>
+                Connect virtual electronic components,
+                control the circuit and discover how
+                electricity flows.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CIRCUIT WORKSPACE
+        ====================================== -->
+
+        <section class="circuit-workspace">
+
+
+            <!-- =================================
+                 CIRCUIT BOARD
+            ================================== -->
+
+            <div class="board-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        🔌 Circuit Board
+                    </h2>
+
+                    <span id="circuit-status">
+                        Circuit Off
+                    </span>
+
+                </div>
+
+
+                <div class="circuit-board">
+
+
+                    <!-- BATTERY -->
+
+                    <div class="component battery">
+
+                        <div class="component-icon">
+                            🔋
+                        </div>
+
+                        <strong>
+                            Battery
+                        </strong>
+
+                        <small>
+                            Power Source
+                        </small>
+
+                    </div>
+
+
+                    <!-- WIRE -->
+
+                    <div class="wire wire-one">
+                    </div>
+
+
+                    <!-- SWITCH -->
+
+                    <button
+                        id="switch-button"
+                        class="component switch">
+
+                        <div class="component-icon">
+                            🔘
+                        </div>
+
+                        <strong>
+                            Switch
+                        </strong>
+
+                        <small id="switch-status">
+                            OFF
+                        </small>
+
+                    </button>
+
+
+                    <!-- WIRE -->
+
+                    <div class="wire wire-two">
+                    </div>
+
+
+                    <!-- LED -->
+
+                    <div
+                        id="led-component"
+                        class="component led">
+
+                        <div
+                            id="led-light"
+                            class="component-icon">
+
+                            💡
+
+                        </div>
+
+                        <strong>
+                            LED
+                        </strong>
+
+                        <small id="led-status">
+                            OFF
+                        </small>
+
+                    </div>
+
+
+                    <!-- WIRE -->
+
+                    <div class="wire wire-three">
+                    </div>
+
+
+                    <!-- GROUND -->
+
+                    <div class="component ground">
+
+                        <div class="component-icon">
+                            ⏚
+                        </div>
+
+                        <strong>
+                            Ground
+                        </strong>
+
+                        <small>
+                            Return Path
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CIRCUIT MESSAGE -->
+
+                <div
+                    id="circuit-message"
+                    class="circuit-message">
+
+                    <h3>
+                        🎯 Circuit Mission
+                    </h3>
+
+                    <p>
+                        Turn ON the switch to
+                        complete the circuit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CONTROL PANEL
+            ================================== -->
+
+            <div class="control-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        🎛️ Circuit Controls
+                    </h2>
+
+                    <span>
+                        Beginner
+                    </span>
+
+                </div>
+
+
+                <div class="control-info">
+
+                    <h3>
+                        How It Works
+                    </h3>
+
+                    <p>
+                        Electricity needs a complete
+                        path to flow through a circuit.
+                    </p>
+
+                </div>
+
+
+                <div class="status-box">
+
+                    <div class="status-row">
+
+                        <span>
+                            🔋 Power
+                        </span>
+
+                        <strong id="power-status">
+                            Ready
+                        </strong>
+
+                    </div>
+
+
+                    <div class="status-row">
+
+                        <span>
+                            🔘 Switch
+                        </span>
+
+                        <strong id="control-switch-status">
+                            OFF
+                        </strong>
+
+                    </div>
+
+
+                    <div class="status-row">
+
+                        <span>
+                            💡 LED
+                        </span>
+
+                        <strong id="control-led-status">
+                            OFF
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="toggle-switch"
+                    class="primary-button">
+
+                    🔘 Turn Switch ON
+
+                </button>
+
+
+                <button
+                    id="reset-circuit"
+                    class="secondary-button">
+
+                    🔄 Reset Circuit
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             CIRCUIT MISSION
+        ====================================== -->
+
+        <section class="mission-section">
+
+            <p class="small-title">
+                ⚡ HANDS-ON CHALLENGE
+            </p>
+
+            <h2>
+                Complete the Circuit
+            </h2>
+
+            <p>
+                Can you make the LED turn ON?
+            </p>
+
+
+            <div class="mission-grid">
+
+
+                <div class="mission-card">
+
+                    <span>
+                        🎯
+                    </span>
+
+                    <h3>
+                        Mission
+                    </h3>
+
+                    <p>
+                        Turn the switch ON and
+                        complete the electrical path.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-card">
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <h3>
+                        Think
+                    </h3>
+
+                    <p>
+                        What happens when the
+                        circuit is open?
+                    </p>
+
+                </div>
+
+
+                <div class="mission-card">
+
+                    <span>
+                        💡
+                    </span>
+
+                    <h3>
+                        Discover
+                    </h3>
+
+                    <p>
+                        Observe what happens to
+                        the LED when current flows.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LEARNING SECTION
+        ====================================== -->
+
+        <section class="learning-section">
+
+            <p class="small-title">
+                🧠 STEM CONCEPT
+            </p>
+
+            <h2>
+                Basic Circuit Concepts
+            </h2>
+
+
+            <div class="learning-grid">
+
+
+                <div class="learning-card">
+
+                    <span>
+                        🔋
+                    </span>
+
+                    <h3>
+                        Power Source
+                    </h3>
+
+                    <p>
+                        A battery provides the
+                        energy needed by the circuit.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        🔌
+                    </span>
+
+                    <h3>
+                        Complete Path
+                    </h3>
+
+                    <p>
+                        Current can flow when
+                        the circuit has a complete path.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        🔘
+                    </span>
+
+                    <h3>
+                        Switch
+                    </h3>
+
+                    <p>
+                        A switch controls whether
+                        the circuit is open or closed.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        💡
+                    </span>
+
+                    <h3>
+                        Output
+                    </h3>
+
+                    <p>
+                        The LED shows the result
+                        when electricity flows.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="circuit.js"></script>
+
+
+</body>
+
+</html>

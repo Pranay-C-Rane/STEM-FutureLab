@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Learning | STEM FutureLab</title>
+
+    <link rel="stylesheet"
+          href="learning.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <div class="logo-icon">
+                🧠
+            </div>
+
+            <div>
+
+                <h1>Smart Learning</h1>
+
+                <p>
+                    STEM FutureLab • Think • Solve • Learn
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button id="refresh-page"
+                    class="header-button">
+
+                🔄 Refresh
+
+            </button>
+
+
+            <button id="home-page"
+                    class="header-button">
+
+                🏠 Home
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="learning-container">
+
+
+        <section class="hero">
+
+            <p class="small-title">
+                COMPUTATIONAL THINKING
+            </p>
+
+            <h2>
+                Learn by Solving 🧩
+            </h2>
+
+            <p>
+                Test your coding, logic and problem-solving
+                skills through fun challenges.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==============================
+             TOPIC SELECTION
+        =============================== -->
+
+        <section id="topic-screen">
+
+            <h2 class="section-title">
+                Choose a Topic
+            </h2>
+
+
+            <div class="topic-grid">
+
+
+                <button class="topic-card"
+                        data-topic="coding">
+
+                    <span>💻</span>
+
+                    <h3>Coding Basics</h3>
+
+                    <p>
+                        Learn sequences and instructions.
+                    </p>
+
+                </button>
+
+
+
+                <button class="topic-card"
+                        data-topic="logic">
+
+                    <span>🧩</span>
+
+                    <h3>Logic</h3>
+
+                    <p>
+                        Improve logical thinking.
+                    </p>
+
+                </button>
+
+
+
+                <button class="topic-card"
+                        data-topic="algorithms">
+
+                    <span>🔢</span>
+
+                    <h3>Algorithms</h3>
+
+                    <p>
+                        Learn how step-by-step solutions work.
+                    </p>
+
+                </button>
+
+
+
+                <button class="topic-card"
+                        data-topic="problem">
+
+                    <span>💡</span>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Solve real-world thinking challenges.
+                    </p>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             QUIZ SCREEN
+        =============================== -->
+
+        <section id="quiz-screen"
+                 class="quiz-screen hidden">
+
+
+            <div class="quiz-top">
+
+                <div>
+
+                    <span id="topic-name">
+                        Coding Basics
+                    </span>
+
+                    <h2>
+                        Challenge
+                    </h2>
+
+                </div>
+
+
+                <div class="score-box">
+
+                    ⭐
+                    <span id="score">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div id="progress-bar"
+                     class="progress-bar">
+
+                </div>
+
+            </div>
+
+
+            <p id="question-number"
+               class="question-number">
+
+                Question 1 of 5
+
+            </p>
+
+
+            <!-- QUESTION -->
+
+            <div class="question-card">
+
+                <h2 id="question">
+
+                    Question will appear here.
+
+                </h2>
+
+
+                <div id="answers"
+                     class="answers">
+
+                </div>
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div id="feedback"
+                 class="feedback hidden">
+
+                <h3 id="feedback-title">
+
+                </h3>
+
+                <p id="feedback-text">
+
+                </p>
+
+            </div>
+
+
+            <button id="next-button"
+                    class="next-button hidden">
+
+                Next Question →
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ==============================
+             RESULT SCREEN
+        =============================== -->
+
+        <section id="result-screen"
+                 class="result-screen hidden">
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+            <h2>
+                Challenge Complete!
+            </h2>
+
+            <p>
+                Great work! You completed the learning challenge.
+            </p>
+
+
+            <div class="final-score">
+
+                <span>
+                    Your Score
+                </span>
+
+                <strong id="final-score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <p id="result-message">
+
+                Keep practicing and improve your skills!
+
+            </p>
+
+
+            <button id="retry-button"
+                    class="primary-button">
+
+                🔄 Try Again
+
+            </button>
+
+
+            <button id="topics-button"
+                    class="secondary-button">
+
+                🧠 Choose Another Topic
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ==============================
+             LEARNING INFO
+        =============================== -->
+
+        <section class="learning-info">
+
+            <h2>
+                🧠 What Are You Developing?
+            </h2>
+
+
+            <div class="info-grid">
+
+                <div>
+
+                    <span>🔍</span>
+
+                    <h3>Logical Thinking</h3>
+
+                    <p>
+                        Understand relationships and patterns.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>⚙️</span>
+
+                    <h3>Algorithms</h3>
+
+                    <p>
+                        Create step-by-step solutions.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>💡</span>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Find solutions to different challenges.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>🚀</span>
+
+                    <h3>Creativity</h3>
+
+                    <p>
+                        Think of new ways to solve problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="learning.js"></script>
+
+</body>
+
+</html>

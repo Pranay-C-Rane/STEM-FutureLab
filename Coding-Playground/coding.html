@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Playground | STEM FutureLab</title>
+
+    <link rel="stylesheet"
+          href="coding.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <div class="logo-icon">
+                💻
+            </div>
+
+            <div>
+
+                <h1>Coding Playground</h1>
+
+                <p>
+                    STEM FutureLab • Code • Run • Discover
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button id="refresh-page"
+                    class="header-button">
+
+                🔄 Refresh
+
+            </button>
+
+
+            <button id="home-page"
+                    class="header-button">
+
+                🏠 Home
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main class="coding-container">
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero">
+
+            <p class="small-title">
+                LEARN TO CODE
+            </p>
+
+            <h2>
+                Build Your First Program 🚀
+            </h2>
+
+            <p>
+                Give instructions to a virtual robot,
+                run your program and see what happens.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             CODING AREA
+        ================================== -->
+
+        <section class="coding-workspace">
+
+
+            <!-- =================================
+                 CODE EDITOR
+            ================================== -->
+
+            <div class="editor-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        👨‍💻 Your Code
+                    </h2>
+
+                    <span>
+                        Beginner
+                    </span>
+
+                </div>
+
+
+                <div class="editor-info">
+
+                    <p>
+                        Write commands for the robot.
+                    </p>
+
+                </div>
+
+
+                <textarea
+                    id="code-editor"
+                    spellcheck="false"
+                    placeholder="Write your commands here...">START
+MOVE
+MOVE
+TURN RIGHT
+MOVE</textarea>
+
+
+                <div class="editor-buttons">
+
+                    <button id="run-button"
+                            class="run-button">
+
+                        ▶️ Run Program
+
+                    </button>
+
+
+                    <button id="clear-code"
+                            class="clear-button">
+
+                        🗑️ Clear
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 ROBOT WORLD
+            ================================== -->
+
+            <div class="robot-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        🤖 Robot World
+                    </h2>
+
+                    <span id="robot-status">
+                        Ready
+                    </span>
+
+                </div>
+
+
+                <div id="robot-grid"
+                     class="robot-grid">
+
+                    <!-- JavaScript creates grid -->
+
+                </div>
+
+
+                <div class="robot-message">
+
+                    <h3 id="message-title">
+                        🎯 Mission
+                    </h3>
+
+                    <p id="message-text">
+                        Write a program and press
+                        Run Program.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             COMMAND GUIDE
+        ================================== -->
+
+        <section class="command-guide">
+
+            <h2>
+                📚 Command Guide
+            </h2>
+
+            <p>
+                Learn the commands you can use.
+            </p>
+
+
+            <div class="command-grid">
+
+
+                <div class="command-card">
+
+                    <code>START</code>
+
+                    <h3>Start Program</h3>
+
+                    <p>
+                        Starts your robot program.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>MOVE</code>
+
+                    <h3>Move Forward</h3>
+
+                    <p>
+                        Moves the robot one step forward.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>TURN RIGHT</code>
+
+                    <h3>Turn Right</h3>
+
+                    <p>
+                        Turns the robot to the right.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>TURN LEFT</code>
+
+                    <h3>Turn Left</h3>
+
+                    <p>
+                        Turns the robot to the left.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>REPEAT</code>
+
+                    <h3>Repeat</h3>
+
+                    <p>
+                        Repeat an instruction multiple times.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>SET</code>
+
+                    <h3>Variables</h3>
+
+                    <p>
+                        Store a number using a variable.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>IF</code>
+
+                    <h3>Condition</h3>
+
+                    <p>
+                        Make a decision using a condition.
+                    </p>
+
+                </div>
+
+
+                <div class="command-card">
+
+                    <code>STOP</code>
+
+                    <h3>Stop Program</h3>
+
+                    <p>
+                        Stops the robot program.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CODING MISSION
+        ================================== -->
+
+        <section class="mission-card">
+
+            <div>
+
+                <p class="small-title">
+                    CODING MISSION
+                </p>
+
+                <h2>
+                    🎯 Reach the Target
+                </h2>
+
+                <p>
+                    Write a program that guides the robot
+                    to the 🎯 target.
+                </p>
+
+            </div>
+
+
+            <div class="mission-info">
+
+                <span>
+                    Moves:
+                    <strong id="move-count">
+                        0
+                    </strong>
+                </span>
+
+                <span>
+                    Status:
+                    <strong id="mission-status">
+                        Not Started
+                    </strong>
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             DEBUG MISSION
+        ================================== -->
+
+        <section class="debug-section">
+
+
+            <div class="debug-header">
+
+                <div>
+
+                    <p class="small-title">
+                        DEBUGGING
+                    </p>
+
+                    <h2>
+                        🐞 Fix the Code
+                    </h2>
+
+                    <p>
+                        Find the mistake in the program
+                        and fix it.
+                    </p>
+
+                </div>
+
+
+                <div class="debug-badge">
+
+                    Beginner
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEBUG CARD -->
+
+            <div class="debug-card">
+
+
+                <!-- BROKEN CODE -->
+
+                <div class="debug-code">
+
+                    <h3>
+                        🧑‍💻 Broken Program
+                    </h3>
+
+                    <p>
+                        Something is wrong with this code.
+                        Can you find it?
+                    </p>
+
+
+                    <textarea
+                        id="debug-editor"
+                        spellcheck="false">START
+MOV
+MOVE
+TURN RIGHT
+MOVE</textarea>
+
+                </div>
+
+
+
+                <!-- DEBUG INFORMATION -->
+
+                <div class="debug-info">
+
+
+                    <div class="debug-question">
+
+                        <span>
+                            🧠
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Find the Error
+                            </h3>
+
+                            <p id="debug-hint">
+                                Run the program and
+                                identify the incorrect command.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        id="debug-run"
+                        class="run-button">
+
+                        🐞 Run Debug Test
+
+                    </button>
+
+
+
+                    <div
+                        id="debug-result"
+                        class="debug-result">
+
+                        Debug result will appear here.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="coding.js"></script>
+
+
+</body>
+
+</html>

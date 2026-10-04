@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Logic Challenge | STEM FutureLab</title>
+
+<link rel="stylesheet"
+      href="logic.css">
+
+</head>
+
+<body>
+
+<!-- =================================
+     HEADER
+================================== -->
+
+<header class="top-header">
+
+    <div class="header-left">
+
+        <div class="logo-icon">
+            🧩
+        </div>
+
+        <div>
+
+            <h1>Logic Challenge Lab</h1>
+
+            <p>
+                STEM FutureLab • Think • Code • Solve
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <button id="refresh-page"
+                class="header-button">
+
+            🔄 Refresh
+
+        </button>
+
+
+        <button id="home-page"
+                class="header-button">
+
+            🏠 Home
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================
+     MAIN
+================================== -->
+
+<main class="logic-container">
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
+
+    <section class="hero">
+
+        <p class="small-title">
+            CODING & LOGICAL THINKING
+        </p>
+
+        <h2>
+            Think Like a Programmer 🧠
+        </h2>
+
+        <p>
+            Learn coding logic through interactive
+            challenges, loops, conditions and debugging.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================
+         CODING CHALLENGE SELECTION
+    ================================== -->
+
+    <section id="challenge-screen">
+
+        <h2 class="section-title">
+            Choose Your Coding Challenge
+        </h2>
+
+
+        <div class="challenge-grid">
+
+
+            <!-- CODE SEQUENCER -->
+
+            <button class="challenge-card"
+                    data-challenge="sequencer">
+
+                <span>🔀</span>
+
+                <h3>
+                    Code Sequencer
+                </h3>
+
+                <p>
+                    Arrange coding instructions
+                    in the correct order.
+                </p>
+
+            </button>
+
+
+
+            <!-- LOOP -->
+
+            <button class="challenge-card"
+                    data-challenge="loop">
+
+                <span>🔁</span>
+
+                <h3>
+                    Loop Challenge
+                </h3>
+
+                <p>
+                    Learn how loops repeat
+                    instructions.
+                </p>
+
+            </button>
+
+
+
+            <!-- IF ELSE -->
+
+            <button class="challenge-card"
+                    data-challenge="condition">
+
+                <span>🔀</span>
+
+                <h3>
+                    If–Else Challenge
+                </h3>
+
+                <p>
+                    Make decisions using
+                    coding conditions.
+                </p>
+
+            </button>
+
+
+
+            <!-- DEBUG -->
+
+            <button class="challenge-card"
+                    data-challenge="debug">
+
+                <span>🐞</span>
+
+                <h3>
+                    Debug the Code
+                </h3>
+
+                <p>
+                    Find mistakes and fix
+                    simple programs.
+                </p>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         GAME SCREEN
+    ================================== -->
+
+    <section id="game-screen"
+             class="game-screen hidden">
+
+
+        <div class="game-top">
+
+            <div>
+
+                <span id="challenge-name">
+                    Coding Challenge
+                </span>
+
+                <h2>
+                    Solve the Challenge
+                </h2>
+
+            </div>
+
+
+            <div class="score-box">
+
+                ⭐
+
+                <span id="score">
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container">
+
+            <div id="progress-bar"
+                 class="progress-bar">
+            </div>
+
+        </div>
+
+
+        <p id="challenge-number"
+           class="challenge-number">
+
+            Challenge 1 of 5
+
+        </p>
+
+
+
+        <!-- PUZZLE -->
+
+        <div class="puzzle-card">
+
+            <h2 id="puzzle">
+
+                Coding challenge will appear here.
+
+            </h2>
+
+
+            <div id="options"
+                 class="options">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FEEDBACK -->
+
+        <div id="feedback"
+             class="feedback hidden">
+
+            <h3 id="feedback-title">
+            </h3>
+
+            <p id="feedback-text">
+            </p>
+
+        </div>
+
+
+
+        <!-- NEXT -->
+
+        <button id="next-button"
+                class="next-button hidden">
+
+            Next Challenge →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =================================
+         RESULT SCREEN
+    ================================== -->
+
+    <section id="result-screen"
+             class="result-screen hidden">
+
+
+        <div class="result-icon">
+            🏆
+        </div>
+
+
+        <h2>
+            Challenge Complete!
+        </h2>
+
+
+        <p>
+            You completed the coding challenge.
+        </p>
+
+
+        <div class="final-score">
+
+            <span>
+                Your Score
+            </span>
+
+            <strong id="final-score">
+                0
+            </strong>
+
+        </div>
+
+
+        <p id="result-message">
+            Keep practicing your coding logic!
+        </p>
+
+
+        <button id="retry-button"
+                class="primary-button">
+
+            🔄 Try Again
+
+        </button>
+
+
+        <button id="challenges-button"
+                class="secondary-button">
+
+            🧩 Choose Another Challenge
+
+        </button>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script src="logic.js"></script>
+```
+
+</body>
+
+</html>

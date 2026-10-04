@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>STEM FutureLab - Reviews</title>
+
+    <link
+        rel="stylesheet"
+        href="reviews.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚀 STEM FutureLab
+        </div>
+
+
+        <div class="page-title">
+            📊 Reviews Dashboard
+        </div>
+
+
+        <button
+            class="back-button"
+            id="back-button">
+
+            ← Home
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ========================================
+         DASHBOARD HEADER
+    ========================================= -->
+
+    <section class="dashboard-header">
+
+        <p class="small-title">
+            STUDENT FEEDBACK
+        </p>
+
+
+        <h1>
+            STEM FutureLab Reviews 📊
+        </h1>
+
+
+        <p>
+            Explore student responses and feedback
+            collected through our STEM outreach activity.
+        </p>
+
+    </section>
+
+
+
+    <!-- ========================================
+         SUMMARY CARDS
+    ========================================= -->
+
+    <section class="summary-section">
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                👥
+            </div>
+
+            <h3>
+                Total Responses
+            </h3>
+
+            <strong id="total-responses">
+                120
+            </strong>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                🎓
+            </div>
+
+            <h3>
+                Classes Covered
+            </h3>
+
+            <strong id="classes-covered">
+                6
+            </strong>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                💻
+            </div>
+
+            <h3>
+                Interested Students
+            </h3>
+
+            <strong id="interested-students">
+                85%
+            </strong>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+                🚀
+            </div>
+
+            <h3>
+                STEM Activity
+            </h3>
+
+            <strong>
+                Active
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         AGE DISTRIBUTION
+    ========================================= -->
+
+    <section class="chart-section">
+
+
+        <div class="chart-card">
+
+            <div class="chart-heading">
+
+                <p class="small-title">
+                    STUDENT INFORMATION
+                </p>
+
+                <h2>
+                    👥 Age Distribution
+                </h2>
+
+                <p>
+                    Number of students according to
+                    their age group.
+                </p>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <canvas
+                    id="ageChart">
+                </canvas>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         CLASS DISTRIBUTION
+    ========================================= -->
+
+    <section class="chart-section">
+
+
+        <div class="chart-card">
+
+            <div class="chart-heading">
+
+                <p class="small-title">
+                    STUDENT INFORMATION
+                </p>
+
+                <h2>
+                    🎓 Class Distribution
+                </h2>
+
+                <p>
+                    Number of students from each class.
+                </p>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <canvas
+                    id="classChart">
+                </canvas>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         TECHNOLOGY INTEREST
+    ========================================= -->
+
+    <section class="chart-section">
+
+
+        <div class="chart-card">
+
+            <div class="chart-heading">
+
+                <p class="small-title">
+                    TECHNOLOGY INTEREST
+                </p>
+
+                <h2>
+                    💻 Interest in Computers & Technology
+                </h2>
+
+                <p>
+                    Student interest before participating
+                    in the STEM activity.
+                </p>
+
+            </div>
+
+
+            <div class="chart-container">
+
+                <canvas
+                    id="interestChart">
+                </canvas>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         RESPONSE SUMMARY
+    ========================================= -->
+
+    <section class="response-section">
+
+
+        <div class="response-card">
+
+            <p class="small-title">
+                FEEDBACK SUMMARY
+            </p>
+
+
+            <h2>
+                📈 Student Response Overview
+            </h2>
+
+
+            <p>
+                This dashboard will display graphical
+                representations of the responses collected
+                through the STEM FutureLab Google Form.
+            </p>
+
+
+            <div class="response-info">
+
+                <div>
+                    <strong>
+                        120
+                    </strong>
+
+                    <span>
+                        Responses
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        85%
+                    </strong>
+
+                    <span>
+                        Interested
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        6
+                    </strong>
+
+                    <span>
+                        Classes
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <h3>
+            🚀 STEM FutureLab
+        </h3>
+
+
+        <p>
+            Learn • Explore • Create • Solve
+        </p>
+
+
+        <p>
+            STEM Outreach Project for School Students
+        </p>
+
+    </footer>
+
+
+
+    <!-- ========================================
+         CHART.JS
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script
+        src="reviews.js">
+    </script>
+
+
+</body>
+
+</html>

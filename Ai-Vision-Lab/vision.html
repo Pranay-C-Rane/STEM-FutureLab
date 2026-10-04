@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Vision Lab | STEM FutureLab</title>
+
+    <link rel="stylesheet"
+          href="vision.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <div class="logo-icon">
+                👁️
+            </div>
+
+            <div>
+
+                <h1>
+                    AI Vision Lab
+                </h1>
+
+                <p>
+                    STEM FutureLab • See • Recognize • Learn
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button
+                id="refresh-page"
+                class="header-button">
+
+                🔄 Refresh
+
+            </button>
+
+
+            <button
+                id="home-page"
+                class="header-button">
+
+                🏠 Home
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         MAIN
+    ========================================= -->
+
+    <main class="vision-container">
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+            <p class="small-title">
+                ARTIFICIAL INTELLIGENCE
+            </p>
+
+            <h2>
+                Teach the AI to Recognize Objects 🤖
+            </h2>
+
+            <p>
+                Explore how computer vision systems
+                identify objects and make predictions.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             AI VISION WORKSPACE
+        ====================================== -->
+
+        <section class="vision-workspace">
+
+
+            <!-- =================================
+                 IMAGE AREA
+            ================================== -->
+
+            <div class="image-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        🖼️ AI Camera
+                    </h2>
+
+                    <span>
+                        Simulation
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="object-display"
+                    class="object-display">
+
+                    <div
+                        id="object-emoji"
+                        class="object-emoji">
+
+                        🐱
+
+                    </div>
+
+                </div>
+
+
+                <p class="camera-text">
+
+                    What does the AI see?
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 AI ANALYSIS
+            ================================== -->
+
+            <div class="analysis-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        🧠 AI Analysis
+                    </h2>
+
+                    <span
+                        id="ai-status">
+
+                        Ready
+
+                    </span>
+
+                </div>
+
+
+                <div class="analysis-box">
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Object
+                        </span>
+
+                        <strong
+                            id="predicted-object">
+
+                            Unknown
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong
+                            id="confidence">
+
+                            0%
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-container">
+
+                        <div
+                            id="confidence-bar"
+                            class="confidence-bar">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            AI Decision
+                        </span>
+
+                        <strong
+                            id="ai-decision">
+
+                            Waiting...
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="analyze-button"
+                    class="primary-button">
+
+                    🔍 Analyze Object
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             OBJECT CHOICES
+        ====================================== -->
+
+        <section class="prediction-section">
+
+            <p class="small-title">
+                AI PREDICTION
+            </p>
+
+            <h2>
+                What Object Is This?
+            </h2>
+
+            <p>
+                Choose what you think the AI camera is seeing.
+            </p>
+
+
+            <div class="object-options">
+
+
+                <button
+                    class="object-button"
+                    data-object="cat">
+
+                    🐱
+                    <span>Cat</span>
+
+                </button>
+
+
+                <button
+                    class="object-button"
+                    data-object="dog">
+
+                    🐶
+                    <span>Dog</span>
+
+                </button>
+
+
+                <button
+                    class="object-button"
+                    data-object="car">
+
+                    🚗
+                    <span>Car</span>
+
+                </button>
+
+
+                <button
+                    class="object-button"
+                    data-object="robot">
+
+                    🤖
+                    <span>Robot</span>
+
+                </button>
+
+
+            </div>
+
+
+            <button
+                id="check-button"
+                class="primary-button">
+
+                🎯 Check My Answer
+
+            </button>
+
+
+            <div
+                id="answer-message"
+                class="answer-message">
+
+                Choose an object first.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SCORE
+        ====================================== -->
+
+        <section class="score-section">
+
+
+            <div class="score-card">
+
+                <span>
+                    ⭐ Score
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    🎯 Accuracy
+                </span>
+
+                <strong id="accuracy">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <span>
+                    🔬 Objects Analyzed
+                </span>
+
+                <strong id="objects-analyzed">
+                    0
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             LEARNING BOX
+        ====================================== -->
+
+        <section class="learning-section">
+
+            <p class="small-title">
+                🧠 STEM CONCEPT
+            </p>
+
+            <h2>
+                How Does Computer Vision Work?
+            </h2>
+
+
+            <div class="learning-grid">
+
+
+                <div class="learning-card">
+
+                    <span>
+                        📷
+                    </span>
+
+                    <h3>
+                        1. Capture
+                    </h3>
+
+                    <p>
+                        A camera captures an image
+                        of an object.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <h3>
+                        2. Analyze
+                    </h3>
+
+                    <p>
+                        AI analyzes the visual
+                        information.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <h3>
+                        3. Predict
+                    </h3>
+
+                    <p>
+                        The AI predicts what
+                        the object could be.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span>
+                        📊
+                    </span>
+
+                    <h3>
+                        4. Confidence
+                    </h3>
+
+                    <p>
+                        AI gives a confidence
+                        value for its prediction.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="vision.js"></script>
+
+
+</body>
+
+</html>
